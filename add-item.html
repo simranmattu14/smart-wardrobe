@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StyleMe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <p id="logo" onclick="toggleMenu()">Smart Wardrobe</p>
+            <nav id="navbar">
+                <a href="index.html"><i class="fa fa-home" style="font-size:14px;"></i> Home</a>
+                <a href="wardrobe.html"><i class="fa fa-bars" style="font-size:14px;"></i> Wardrobe</a>
+                <a class="clicked" href="add-item.html"><i class="fa fa-plus" style="font-size:14px;"></i> Add Item</a>
+                <a href="create-outfit.html"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> Create Outfit</a>
+                <a href="outfits.html"><i class="fa-solid fa-shirt"></i> My Outfits</a>
+                <a href="ai-stylist.html"><i class="fa-solid fa-magic"></i> AI Stylist</a>
+            </nav>
+        </header>
+        <section class="intro">
+            <h1>Add New Item</h1>
+            <p>Add a piece to your digital wardrobe. </p>
+        </section>
+        <section id="add-item-form" class="main">
+            <form id="wardrobeForm">
+                <!-- Photo Upload-->
+                <Label>Photo</Label>
+                <div class="upload-box" id="uploadBox">
+                    <img id="preview" hidden>
+                    <span id="uploadText">Click to upload a photo</span>
+                    <input 
+                        type="file"
+                        id="photoInput"
+                        accept="image/*"
+                        hidden>
+                </div>
+                <!-- Item Details -->
+                <label> Item Name *</label>
+                <input 
+                    type="text" 
+                    id="itemName" 
+                    placeholder="e.g. White Linen Shirt"
+                    required>
+                <!-- Category *-->
+                <label> Category *</label>
+                <div class="categories">
+                    <button type="button" class="category">👕 Tops</button>
+                    <button type="button" class="category">👖 Bottoms</button>
+                    <button type="button" class="category">👗 Dresses</button>
+                    <button type="button" class="category">🧥 Outerwear</button>
+                    <button type="button" class="category">👟 Shoes</button>
+                    <button type="button" class="category">👜 Accessories</button>
+                </div>
+                <!-- colour -->
+                 <div class="row">
+                    <div>
+                        <label> Color </label>
+                        <input 
+                            type="text"
+                            id="itemColor"  
+                            placeholder="e.g. Navy Blue">
+                    </div>
+                    <!-- Material-->
+                    <div>
+                        <label> Material </label>
+                        <input 
+                            type="text" 
+                            id="itemMaterial"
+                            placeholder="e.g. Cotton">
+                    </div>
+                 </div>
+                 <!-- Season -->
+                  <label> Season </label>
+                  <select multiple id="itemSeason">
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </select>
+                <!-- Note -->
+                <label> Note </label>
+                <textarea 
+                    id="itemNotes"
+                    placeholder="Add any additional details or styling tips for this item."></textarea>
+                <!-- Submit Button -->
+                 <button class="submit-btn" type="submit">
+                    + Add to Wardrobe
+                 </button>
+                 <!-- Reset Button -->
+                 <button class="reset-btn" type="reset">
+                    Reset Form
+                 </button>
+            </form>
+        </section>
+        <footer>
+            Copyright © 2024 Smart Wardrobe. All rights reserved.
+        </footer>
+    </body>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/wardrobe.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+</html>

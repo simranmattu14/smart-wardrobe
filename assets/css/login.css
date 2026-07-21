@@ -1,0 +1,57 @@
+#signin {
+    display: block;
+    padding-bottom: 0px;
+}
+
+#signin h1 {
+    display: inline-block;
+    position: relative;
+    Left: 50%;
+    Translate: -50% -50%;
+    padding-bottom: 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+#signin-content {
+    background-color: white;
+    padding: 10%;
+    margin: 5%;
+    border-radius: 10%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.inputBox {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 0px;
+    margin: 10px;
+    top: 0;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; 
+}
+
+.inputBox ion-icon {
+    font-size: 1.2rem;
+}
+
+.inputBox input:focus + label,
+.inputBox input:not(:placeholder-shown) + label {
+    top: -10px; /* Moves the label above the input */
+    font-size: 12px; /* Makes the label smaller */
+}
+
+input:focus ~ .label, /* Use the correct selector here */
+input:not(:placeholder-shown) ~ .label { /* Add this selector to handle cases where the input is not empty */
+    top: -5px;
+}
