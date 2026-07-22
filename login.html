@@ -28,22 +28,27 @@
                 <h1> Sign In </h1>
             </section>
             <div class="inputBox">
-                <input type="text" required>
-                <label for=""> Email <ion-icon name="mail-outline"></ion-icon> </label>
+                <input type="text" id="login-email" placeholder="" required>
+                <label for=""> Email </label>
+                <ion-icon name="mail-outline"></ion-icon>
             </div>
             <div class="inputBox">
-                <input type="text" required>
-                <label> Password <ion-icon name="lock-closed-outline"></ion-icon> </label>
+                <input type="text" id="login-password" placeholder="" required>
+                <label> Password </ion-icon> </label>
+                <ion-icon name="lock-closed-outline"></ion-icon>
             </div>
             <div class="forget">
-                <label><input type="checkbox"> Remember me</label>
+                <div id="remember">
+                    <label> Remember me</label>
+                    <input id="remember-me" type="checkbox">
+                </div>
                 <a href="#">Forget Password</a>
             </div>
             <div class="intputBox">
                 <input type="submit" value="Login">
             </div>
             <div class="register">
-                <label>Don't have an account <a href="#">Register</a></label>
+                <label>Don't have an account? <a href="#">Register</a></label>
             </div>
         </form>
         <footer>
@@ -51,5 +56,6 @@
         </footer>
     </body>
     <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/remember.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons/ionicons.js"></script>
 </html>
