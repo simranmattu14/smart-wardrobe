@@ -88,17 +88,17 @@ section p2 {
 }
 
 .user-button {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #ededed;
-    border-radius: 10px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    min-height: 80vh;
+}
 
-    padding: 25px;
-
-    position: relative;
-    top: 25%;
-    Left: 50%;
-    Translate: -50% -50%;  
+.user-button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 section button {
