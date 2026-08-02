@@ -6,6 +6,21 @@
         <title>StyleMe</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="/assets/css/style.css">
+
+        <script
+            defer
+            crossorigin="anonymous"
+            src="https://hip-mallard-38.clerk.accounts.dev/npm/@clerk/ui@1/dist/ui.browser.js"
+            type="text/javascript">
+        </script>
+
+        <script
+            defer
+            crossorigin="anonymous"
+            data-clerk-publishable-key="pk_test_aGlwLW1hbGxhcmQtMzguY2xlcmsuYWNjb3VudHMuZGV2JA"
+            src="https://hip-mallard-38.clerk.accounts.dev/npm/@clerk/clerk-js@6/dist/clerk.browser.js"
+            type="text/javascript">
+        </script>
     </head>
     <body>
         <header>
@@ -19,17 +34,32 @@
                 <a href="ai-stylist.html"><i class="fa-solid fa-magic"></i> AI Stylist</a>
             </nav>
         </header>
-        <section class="intro">
+
+        <section class="intro" id="guest-home">
             <h1>Welcome to Smart Wardrobe</h1>
             <p>Your digital closet for effortless style. Explore your wardrobe, create outfits, and get personalized fashion advice all in one place.</p>
         </section>
-        <section class="user-button">
-            <button onclick="window.location.href='login.html'"> Login </button>
-            <button> Sign up </button>
+
+        <section class="user-button" id="guest-actions">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
         </section>
+
+        <section class="intro" id="member-home" style="display: none;">
+            <h1>Welcome back, <span id="user-name">there</span>!</h1>
+            <p>Your wardrobe is ready. Jump back into your outfits, add new items, and discover fresh style inspiration.</p>
+        </section>
+
+        <section class="user-button" id="member-actions" style="display: none;">
+            <button onclick="window.location.href='wardrobe.html'">View Wardrobe</button>
+            <button onclick="window.location.href='create-outfit.html'">Create Outfit</button>
+            <button onclick="Clerk.signOut().then(() => location.reload())">Sign Out</button>
+        </section>
+
         <footer>
             Copyright © 2026 Smart Wardrobe. All rights reserved.
         </footer>
     </body>
     <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/index.js"></script>
 </html>

@@ -1,112 +1,14 @@
-#signin {
-    display: block;
-    padding-bottom: 0px;
-}
-
-#signin h1 {
-    display: inline-block;
-    position: relative;
-    Left: 50%;
-    Translate: -50% -50%;
-    padding-bottom: 0px;
-}
-
-input[type="submit"]:hover {
-    background-color: rgb(255, 255, 255, 0.5);
-}
-
-#signin-content {
-    position: relative;
-    Top: 50%;
-    Left: 50%;
-    Translate: -50% -50%; 
-    background-color: white;
-    padding: 50px;
-    border-radius: 10%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    max-width: 500px;
-}
-
-.inputBox {
-    position: relative;
-    margin: 30px 0;
-    max-width: 500px;
-    border-bottom: 2px solid grey;
-}
-
-.inputBox label {
-    position: absolute;
-    top: 0%;
-    left: 5px;
-    transform: translateY(-50%);
-    transition: all 0.5s ease-in-out;
-}
-
-.inputBox input{
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-}
-
-.inputBox ion-icon {
-    position: absolute;
-    top: 0%;
-    right: 0px;
-    transition: all 0.5s ease-in-out;
-}
-
-.inputBox input:focus + label,
-.inputBox input:focus ~ ion-icon,
-.inputBox input:not(:placeholder-shown) ~ ion-icon,
-.inputBox input:not(:placeholder-shown) + label {
-    top: -20px;
-    font-size: 12px;
-}
-
-.inputBox input:focus {
-    outline: none;
-    border: none;
-}
-
-#remember {
+.login-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px);
 }
 
-#remember label {
-    font-size: 15px;
-    display: block;
-    width: 50%;
-    margin: 0px;
-}
-
-#remember input {
-    display: block;
-    width: 15px;
-}
-
-.forget a {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-.register a {
-    font-size: 15px;
-}
-
-.register {
-    text-align: center;
-}
-  
-.register label {
-    font-size: 10px;
-}
-
-.intro {
-    display: none;
+#clerk-sign-in {
+    width: min(100%, 420px);
+    margin: 0 auto;
 }
