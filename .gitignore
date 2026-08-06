@@ -31,3 +31,5 @@ build/
 # IDE files
 .idea/
 *.iml
+
+config.js

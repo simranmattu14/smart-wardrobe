@@ -48,23 +48,6 @@ document.querySelectorAll(".category").forEach(button => {
     });
 });
 
-const request = indexedDB.open("WardrobeDB", 1);
-
-request.onupgradeneeded = function (event) {
-
-    db = event.target.result;
-
-    db.createObjectStore("clothing", {
-        keyPath: "id",
-        autoIncrement: true
-    });
-
-};
-
-request.onsuccess = function (event) {
-    db = event.target.result;
-    console.log("Database opened!");
-};
 
 document
     .getElementById("wardrobeForm")
@@ -95,13 +78,7 @@ document
         itemSeason.value = "";
         itemNotes.value = "";
 
-        const transaction =
-            db.transaction("clothing", "readwrite");
-
-        const store =
-            transaction.objectStore("clothing");
-
-        store.add(item);
+        // Save the item to Database TODO
 
         console.log("Item added to wardrobe:", item);
     });

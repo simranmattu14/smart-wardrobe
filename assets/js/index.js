@@ -1,3 +1,5 @@
+import supabase from './supabaseClient.js';
+
 window.addEventListener("load", async () => {
     await Clerk.load({
         ui: {
