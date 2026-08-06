@@ -1,3 +1,13 @@
+import { CONFIG } from './config.js';
+
+const script = document.createElement("script");
+script.src = "https://hip-mallard-38.clerk.accounts.dev/npm/@clerk/clerk-js@6/dist/clerk.browser.js";
+script.async = true;
+script.crossOrigin = "anonymous";
+script.setAttribute("data-clerk-publishable-key", CONFIG.CLERK_PUBLISHABLE_KEY);
+document.head.appendChild(script);
+
+
 window.addEventListener("load", async () => {
 
     await Clerk.load({
