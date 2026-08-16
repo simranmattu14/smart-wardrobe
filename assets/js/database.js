@@ -48,19 +48,6 @@ async function addClothingItem(item) {
 }
 
 
-
-// Save an outfit
-// async function saveOutfit(name, itemIds) {
-//   const { data, error } = await supabase
-//     .from('outfits')
-//     .insert({ name, item_ids: itemIds })
-//     .select();
-
-//   if (error) console.error(error);
-//   return data;
-// }
-
-
 let selectedCategory = "";
 
 uploadBox.addEventListener("click", () => {
